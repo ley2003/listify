@@ -7,7 +7,6 @@ Listify is a simple React app for managing your todo list. You can add new todos
 - Add new todos
 - Mark todos as complete
 - View your list of tasks
-- Clean and organized codebase
 - Basic styling for a pleasant user experience
 
 ## Technologies Used
