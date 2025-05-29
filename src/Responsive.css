@@ -1,0 +1,274 @@
+/* Base styles */
+.app {
+  display: flex;
+  min-height: 100vh;
+  font-family: 'Spline Sans Mono', monospace;
+  color: #fff;
+  flex-direction: column;
+}
+
+/* Responsive layout */
+@media (min-width: 768px) {
+  .app {
+    flex-direction: row;
+  }
+}
+
+.sidebar {
+  width: 100%;
+  min-height: auto;
+  background-color: #302B63;
+  color: #fff;
+  padding: 20px 15px;
+  font-family: 'Spline Sans Mono', monospace;
+  order: 2;
+}
+
+@media (min-width: 768px) {
+  .sidebar {
+    width: 250px;
+    min-height: 100vh;
+    padding: 32px 18px 0 18px;
+    order: 1;
+  }
+}
+
+.main-content {
+  flex: 1;
+  padding: 15px;
+  display: flex;
+  background-color: #0F0C29;
+  flex-direction: column;
+  order: 1;
+}
+
+@media (min-width: 768px) {
+  .main-content {
+    padding: 20px;
+    flex-direction: row;
+    order: 2;
+  }
+}
+
+.todo-section {
+  flex: 2;
+  padding-right: 0;
+}
+
+@media (min-width: 768px) {
+  .todo-section {
+    padding-right: 20px;
+  }
+}
+
+.calendar-sidebar {
+  width: 100%;
+  padding: 15px;
+  margin-top: 20px;
+}
+
+@media (min-width: 768px) {
+  .calendar-sidebar {
+    width: 300px;
+    margin-top: 0;
+  }
+}
+
+/* Responsive sidebar elements */
+.sidebar h1 {
+  font-size: 1.5rem;
+  margin-bottom: 24px;
+}
+
+@media (min-width: 768px) {
+  .sidebar h1 {
+    font-size: 2rem;
+    margin-bottom: 36px;
+  }
+}
+
+.sidebar li {
+  font-size: 1rem;
+  padding: 6px 12px;
+}
+
+@media (min-width: 768px) {
+  .sidebar li {
+    font-size: 1.2rem;
+    padding: 8px 16px;
+  }
+}
+
+/* Responsive todo items */
+.todo-item {
+  padding: 12px;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+@media (min-width: 576px) {
+  .todo-item {
+    flex-direction: row;
+    align-items: center;
+    padding: 18px;
+  }
+}
+
+.todo-content {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+@media (min-width: 576px) {
+  .todo-content {
+    width: auto;
+    margin-bottom: 0;
+  }
+}
+
+.todo-meta {
+  width: 100%;
+  justify-content: space-between;
+}
+
+@media (min-width: 576px) {
+  .todo-meta {
+    width: auto;
+    justify-content: flex-end;
+  }
+}
+
+/* Responsive calendar */
+.calendar-nav {
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.calendar-date {
+  padding: 4px 0;
+  font-size: 0.8rem;
+}
+
+@media (min-width: 768px) {
+  .calendar-date {
+    padding: 6px 0;
+    font-size: 1rem;
+  }
+}
+
+/* Responsive forms */
+.add-todo-form, .expanded-todo-form {
+  padding: 15px;
+  max-width: 100%;
+}
+
+@media (min-width: 768px) {
+  .add-todo-form, .expanded-todo-form {
+    padding: 20px;
+    max-width: 600px;
+  }
+}
+
+.form-actions {
+  flex-direction: column;
+  gap: 8px;
+}
+
+@media (min-width: 576px) {
+  .form-actions {
+    flex-direction: row;
+    gap: 10px;
+  }
+}
+
+/* Priority options responsiveness */
+.priority-options {
+  flex-direction: column;
+  gap: 8px;
+}
+
+@media (min-width: 576px) {
+  .priority-options {
+    flex-direction: row;
+    gap: 20px;
+  }
+}
+
+/* Mobile menu toggle */
+.mobile-menu-toggle {
+  display: block;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.5rem;
+  cursor: pointer;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+@media (min-width: 768px) {
+  .mobile-menu-toggle {
+    display: none;
+  }
+}
+
+.sidebar.collapsed {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .sidebar.collapsed {
+    display: block;
+  }
+}
+
+/* Adjust calendar sidebar position */
+@media (max-width: 1024px) {
+  .main-content {
+    flex-direction: column;
+  }
+  .calendar-sidebar {
+    width: 100%;
+  }
+}
+
+/* Better input sizes on mobile */
+.new-list-input,
+.add-todo-form input[type="text"],
+.add-todo-form input[type="date"] {
+  font-size: 0.9rem;
+  padding: 10px;
+}
+
+@media (min-width: 768px) {
+  .new-list-input,
+  .add-todo-form input[type="text"],
+  .add-todo-form input[type="date"] {
+    font-size: 1rem;
+    padding: 12px;
+  }
+}
+
+/* Adjust greeting sizes */
+.greeting-date {
+  font-size: 1.3rem;
+}
+
+.greeting-todo {
+  font-size: 1rem;
+}
+
+@media (min-width: 768px) {
+  .greeting-date {
+    font-size: 1.6rem;
+  }
+  .greeting-todo {
+    font-size: 1.2rem;
+  }
+}
+
+/* Make buttons more touch-friendly on mobile */
+button, .sidebar li {
+  min-height: 44px; /* Recommended minimum touch target size */
+  min-width: 44px;
+}

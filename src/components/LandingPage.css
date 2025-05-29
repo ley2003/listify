@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Spline+Sans+Mono:wght@400;600&display=swap');
+
+@keyframes check-pop {
+  0% {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+  80% {
+    transform: scale(1.2);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.landing-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  background: linear-gradient(150deg, #0f0c29, #302b63, #24243e); 
+  color: white;
+  font-family: 'Spline Sans Mono', monospace;
+}
+
+.landing-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  flex: 1;
+}
+
+.title-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+
+.checkbox {
+  width: 24px;
+  height: 24px;
+  border: 2px solid white;
+  border-radius: 4px;
+  margin-right: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s ease;
+}
+
+.checkbox.checked {
+  background-color: white;
+}
+
+.checkbox.checked .check-icon {
+  animation: check-pop 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.check-icon {
+  color: #302b63;
+  font-size: 14px;
+}
+
+h1 {
+  font-size: 3rem;
+  margin: 0;
+  font-weight: 600;
+}
+
+.instruction {
+  font-size: 1.2rem;
+  opacity: 0.8;
+  margin: 32px 0 0 0;
+  text-align: center;
+  align-self: center;
+}
+
+@keyframes fade-out {
+  to {
+    opacity: 0;
+    pointer-events: none;
+  }
+}
+
+.landing-container.fade-out {
+  animation: fade-out 0.5s forwards;
+}
