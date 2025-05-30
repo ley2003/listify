@@ -525,7 +525,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   padding: 20px;
   border-radius: 8px;
   width: 100%;
-  max-width: 1300px; 
+  max-width: 1350px; 
   box-sizing: border-box;
 }
 .expanded-todo-form {
